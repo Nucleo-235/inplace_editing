@@ -9,9 +9,16 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Henrique Rangel"]
   spec.email         = ["hrangel@nucleo235.com.br"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = <<SUM
+  This front-end gem helps to allow users/managers to inplace edit string, text, images or other elements.
+  Besides that it helps to add optional or valid text only if a object's property exists.
+SUM
+  spec.description   = <<DESC
+  InplaceEditing is a jQuery and Best In Place script and a Rails helper that provides methods 
+  (string_editor, image_editor, text_editor, element_editor, optional_editor, only_valid_editor) to allow 
+  editing any ActiveRecord object's property (since it uses standard BestInPlace form).
+DESC
+  spec.homepage      = "https://github.com/Nucleo-235/inplace_editing"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

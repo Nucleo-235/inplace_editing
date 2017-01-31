@@ -29,6 +29,25 @@ def set_editor_config
 end
 ```
 
+Don't forget to add scripts
+
+    //= require jquery
+    //= require best_in_place
+    //= require inplace_editing
+
+    $(document).ready(function() {
+      /* Activating Best In Place */
+      jQuery(".best_in_place").best_in_place();
+    });
+
+```javascript
+before_action :set_editor_config
+def set_editor_config
+  @can_edit = false # or true
+  @inplace_editing_mode = (@can_edit ? 'edit' : 'read')
+end
+```
+
 ## Usage
 
 TODO: Write usage instructions here
