@@ -18,7 +18,7 @@ SUM
   (string_editor, image_editor, text_editor, element_editor, optional_editor, only_valid_editor) to allow 
   editing any ActiveRecord object's property (since it uses standard BestInPlace form).
 DESC
-  spec.homepage      = "https://github.com/Nucleo-235/inplace_editing"
+  spec.homepage      = "https://github.com/hrangel/inplace_editing"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
