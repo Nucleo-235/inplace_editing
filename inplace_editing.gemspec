@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "inplace_editing"
   spec.version       = InplaceEditing::VERSION
   spec.authors       = ["Henrique Rangel"]
-  spec.email         = ["hrangel@nucleo235.com.br"]
+  spec.email         = ["dev@hrangel.com.br"]
 
   spec.summary       = <<SUM
   This front-end gem helps to allow users/managers to inplace edit string, text, images or other elements.
