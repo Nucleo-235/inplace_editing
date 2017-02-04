@@ -6,10 +6,10 @@
   .image-container
     img.preview.editable-preview src="#{image_src}" style="#{image_src.blank? ? 'display:none' : ''}"
     - if image_src.blank?
-      a.insert-image href="#" Clique para inserir imagem
+      a.insert-image href="" Clique para inserir imagem
   .actions-container style="display:none;"
-    input.saveButton type="submit" href="#" value="Salvar"
-    input.cancelButton type="button" href="#" value="Cancelar"
+    input.saveButton type="submit" value="Salvar"
+    input.cancelButton type="button" value="Cancelar"
 javascript:
   $(document).ready(function() {
     var form_id = "#{form_id}";
