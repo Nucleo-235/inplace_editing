@@ -36,8 +36,8 @@ Don't forget to add scripts
     //= require inplace_editing
 
     $(document).ready(function() {
-      /* Activating Best In Place */
-      jQuery(".best_in_place").best_in_place();
+      /* Activating Inplace Editor */
+      InplaceEditingManager.bindAll();
     });
 
 ## Usage

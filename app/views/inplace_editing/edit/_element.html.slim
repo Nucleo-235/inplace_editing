@@ -2,5 +2,5 @@
   .best_before
     - if local_assigns[:label]
       label = local_assigns[:label] + ' '
-    = best_in_place localized_object, property, as: :input, :ok_button => 'Salvar', :cancel_button => 'Cancelar', :place_holder => (local_assigns[:place_holder] ? local_assigns[:place_holder] : "[texto aqui]")
+    = best_in_place localized_object, property, as: :input, class: 'inplace_editor inplace_editor_element', :ok_button => 'Salvar', :cancel_button => 'Cancelar', :place_holder => (local_assigns[:place_holder] ? local_assigns[:place_holder] : "[texto aqui]")
   = yield(local_assigns)
