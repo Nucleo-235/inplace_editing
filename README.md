@@ -42,7 +42,8 @@ Don't forget to add scripts
 
 And styles
 
-    *= require inplace_editing
+    @import "font-awesome";
+    @import "inplace_editing";
 
 ## Usage
 

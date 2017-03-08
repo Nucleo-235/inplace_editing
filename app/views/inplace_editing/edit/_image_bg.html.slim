@@ -1,0 +1,13 @@
+- image_src = localized_object[property] ? localized_object.send(property.to_s + '_url') : local_assigns[:default_value]
+= content_tag tag do |el|
+  - attrs.each {|key_name, value| el[key_name.to_sym] = value }
+  - el[:class] = 'inplace_editor inplace_editor_image_bg ' + (el[:class].present? ? el[:class] : '')
+  = simple_form_for(localized_object, html: { :multipart => true, novalidate: true }, :format => :json, :remote => true, authenticity_token: true) do |f|
+    = f.input_field property, as: :file, label: "Trocar Imagem", style: 'display:none'
+    = f.input property.to_s + "_cache", as: :hidden
+    .editor-container
+      a class="#{image_src.blank? ? 'insert-image' : 'edit-image'}" #{image_src.blank? ? 'Clique para inserir imagem' : ''}
+    .actions-container style="display:none;"
+      input.saveButton type="submit" value="Salvar" /
+      input.cancelButton type="button" value="Cancelar" /
+    = yield(local_assigns)

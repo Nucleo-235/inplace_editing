@@ -62,3 +62,14 @@
     }
   }
 }
+
+.inplace_editor_image_bg {
+  position: relative;
+  z-index: 5;
+  .editor-container {
+    a.edit-image {
+      @extend .inplace_editor_edit_icon;
+      z-index: 7;
+    }
+  }
+}
