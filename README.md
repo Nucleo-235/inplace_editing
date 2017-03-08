@@ -40,6 +40,10 @@ Don't forget to add scripts
       InplaceEditingManager.bindAll();
     });
 
+And styles
+
+    *= require inplace_editing
+
 ## Usage
 
 TODO: Write usage instructions here

@@ -2,8 +2,9 @@
 = simple_form_for(localized_object, html: { class: 'inplace_editor inplace_editor_image', :multipart => true, novalidate: true }, :format => :json, :remote => true, authenticity_token: true) do |f|
   = f.input_field property, as: :file, label: "Trocar Imagem", style: 'display:none'
   = f.input property.to_s + "_cache", as: :hidden
-  .image-container
-    img.preview.editable-preview src="#{image_src}" style="#{image_src.blank? ? 'display:none' : ''}"
+  .editor-container
+    .image-container style="#{image_src.blank? ? 'display:none' : ''}"
+      img.preview.editable-preview src="#{image_src}"
     - if image_src.blank?
       a.insert-image href="" Clique para inserir imagem
   .actions-container style="display:none;"

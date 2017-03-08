@@ -1,0 +1,64 @@
+.best_in_place, .form_in_place {
+  input, textarea {
+    color: $base-black !important;
+  }
+  input:not([type=button]):not([type=reset]):not([type=submit]), textarea {
+    width: 100%;
+  }
+}
+
+.inplace_editor_edit_icon {
+  @extend .fa;
+  @extend .fa-pencil-square-o;
+
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  background-color: rgba(255,255,255, 0.8);
+  color: black;
+  text-align: right;
+  padding: 2px 4px;
+  padding-left: 5px;
+  width: 25px;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.best_in_place_textarea {
+  display: inline-block;
+}
+
+.inplace_editor_string, .best_in_place_textarea, .inplace_editor_element {
+  position: relative;
+  z-index: 5;
+
+  &:before {
+    @extend .inplace_editor_edit_icon;
+    z-index: 6;
+  }
+  form {
+    position: relative;
+    z-index: 7;
+  }
+}
+
+.inplace_editor_image {
+  .image-container {
+    position: relative;
+    z-index: 5;
+
+    &:before {
+      @extend .inplace_editor_edit_icon;
+      z-index: 7;
+    }
+
+    img {
+      position: relative;
+      z-index: 6;
+    }
+  }
+}
