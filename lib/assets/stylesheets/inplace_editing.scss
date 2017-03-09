@@ -28,13 +28,15 @@
   }
 }
 
-.best_in_place_textarea {
+.inplace_editor_text {
   display: inline-block;
 }
 
-.inplace_editor_string, .best_in_place_textarea, .inplace_editor_element {
+.inplace_editor_string, .inplace_editor_text, .inplace_editor_element {
   position: relative;
   z-index: 5;
+  min-width: 35px;
+  display: inline-block;
 
   &:before {
     @extend .inplace_editor_edit_icon;
