@@ -28,7 +28,7 @@ module InplaceEditingHelper
   end
 
   def element_editor(localized_object, property, place_holder = nil, label = nil)
-    render layout: 'inplace/element', :locals => editor_locals(localized_object, property, place_holder, nil, label) do |locals|
+    render layout: 'inplace_editing/element', :locals => editor_locals(localized_object, property, place_holder, nil, label) do |locals|
       yield locals
     end
   end
