@@ -130,7 +130,7 @@ module InplaceEditingHelper
     end
     
     def render(content)
-      "<#{name}#{render_attributes}>#{content.strip}</#{name}>".html_safe
+      "<#{name}#{render_attributes}>#{content ? content.strip : nil}</#{name}>".html_safe
     end
 
     def render_attributes
