@@ -4,7 +4,7 @@
   = f.input property.to_s + "_cache", as: :hidden
   .editor-container
     .image-container style="#{image_src.blank? ? 'display:none' : ''}"
-      img.preview.editable-preview src="#{image_src}" alt="#{local_assigns[:title]}"
+      img.preview.editable-preview src="#{image_src}" alt="#{local_assigns[:title]}" class="#{local_assigns[:class]}"
     - if image_src.blank?
       a.insert-image href="" Clique para inserir imagem
   .actions-container style="display:none;"
