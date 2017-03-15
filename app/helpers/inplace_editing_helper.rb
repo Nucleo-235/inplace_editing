@@ -25,6 +25,12 @@ module InplaceEditingHelper
 
   def image_editor(localized_object, property, place_holder = nil, default_value = nil, title = "", css_class="")
     locals = editor_locals(localized_object, property, place_holder, default_value)
+    image_src = default_value
+    if localized_object[property]
+      image_src = localized_object.public_send(property)
+      image_src = image_src.url if image.respond_to?(:url)
+    end
+    locals[:image_src] = image_src
     locals[:title] = title
     locals[:class] = css_class
     render partial: 'inplace_editing/image', :locals => locals

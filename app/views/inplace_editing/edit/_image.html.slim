@@ -1,4 +1,3 @@
-- image_src = localized_object[property] ? localized_object.send(property.to_s + '_url') : local_assigns[:default_value]
 = simple_form_for(localized_object, html: { class: 'inplace_editor inplace_editor_image', :multipart => true, novalidate: true }, :format => :json, :remote => true, authenticity_token: true) do |f|
   = f.input_field property, as: :file, label: "Trocar Imagem", style: 'display:none'
   = f.input property.to_s + "_cache", as: :hidden
