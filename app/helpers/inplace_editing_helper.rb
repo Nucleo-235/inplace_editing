@@ -28,7 +28,7 @@ module InplaceEditingHelper
     image_src = default_value
     if localized_object[property]
       image_src = localized_object.public_send(property)
-      image_src = image_src.url if image.respond_to?(:url)
+      image_src = image_src.url if image_src.respond_to?(:url)
     end
     locals[:image_src] = image_src
     locals[:attrs] = tag_attributes
