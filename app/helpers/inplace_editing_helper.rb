@@ -23,7 +23,7 @@ module InplaceEditingHelper
     render partial: 'inplace_editing/string', :locals => editor_locals(localized_object, property, place_holder)
   end
 
-  def image_editor(localized_object, property, place_holder = nil, default_value = nil, title = "", css_class="")
+  def image_editor(localized_object, property, place_holder = nil, default_value = nil, tag_attributes = { })
     locals = editor_locals(localized_object, property, place_holder, default_value)
     image_src = default_value
     if localized_object[property]
@@ -31,8 +31,7 @@ module InplaceEditingHelper
       image_src = image_src.url if image.respond_to?(:url)
     end
     locals[:image_src] = image_src
-    locals[:title] = title
-    locals[:class] = css_class
+    locals[:attrs] = tag_attributes
     render partial: 'inplace_editing/image', :locals => locals
   end
 
