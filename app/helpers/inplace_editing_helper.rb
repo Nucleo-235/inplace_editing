@@ -97,6 +97,19 @@ module InplaceEditingHelper
     end
   end
 
+  def empty_content_tag(*args)
+    if block_given?
+      tag = Tag.new(args[0], args[1] || {})
+      old_buf = @output_buffer
+      @output_buffer = ActionView::OutputBuffer.new
+      content = tag.render(@output_buffer.presence)
+      @output_buffer = old_buf
+      content
+    else
+      super
+    end
+  end
+
   class Tag
     include ActionView::Helpers::CaptureHelper
     attr_accessor :id

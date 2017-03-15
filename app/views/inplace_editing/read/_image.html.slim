@@ -1,3 +1,3 @@
-= content_tag :img do |el|
+= empty_content_tag :img do |el|
   - attrs.each {|key_name, value| el[key_name.to_sym] = value }
   - el[:src] = image_src

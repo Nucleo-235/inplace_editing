@@ -3,7 +3,7 @@
   = f.input property.to_s + "_cache", as: :hidden
   .editor-container
     .image-container style="#{image_src.blank? ? 'display:none' : ''}"
-      = content_tag :img do |el|
+      = empty_content_tag :img do |el|
         - attrs.each {|key_name, value| el[key_name.to_sym] = value }
         - el[:class] = el[:class].present? ? (el[:class] + ' preview editable-preview') : 'preview editable-preview'
         - el[:src] = image_src
