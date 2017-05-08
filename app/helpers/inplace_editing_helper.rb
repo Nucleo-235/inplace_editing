@@ -60,16 +60,21 @@ module InplaceEditingHelper
     end
   end
 
-  def markdown(text, placeholder = '[texto aqui]')
+  def markdown(text, placeholder = '[texto aqui]', options = nil)
     return placeholder if !text
-    options = {
+    default_options = {
       filter_html:     false,
-      hard_wrap:       true, 
+      hard_wrap:       true,
       link_attributes: { rel: 'nofollow', target: "_blank" },
-      space_after_headers: true, 
+      space_after_headers: true,
       fenced_code_blocks: true,
       tables: true
     }
+    if options
+      options = default_options.merge(options)
+    else
+      options = default_options
+    end
 
     extensions = {
       autolink:           true,
